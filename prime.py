@@ -6,16 +6,18 @@ def prime(num):
         if num % i == 0:
             flag = True
             break
-    if flag:
-        print("not prime")
+    if flag == True:
+        return True
     else:
-        print("prime")
+        return False
 
 def primeM(m):
     for i in range(1,m):
-        print(i, prime(i))
+        if prime(i) == True:
+            print(i,"not prime")
+        else:
+            print(i,"prime")
 
-
-m = 20
-# prime(n)
+m = 17
+prime(m)
 primeM(m)
